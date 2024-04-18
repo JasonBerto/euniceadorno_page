@@ -33,6 +33,15 @@
                     clickedDiv.style.display = "";
             }
           </script>
+                    <script>
+                      function hideElement() {
+                          // Hide all divs
+                          var divs = document.querySelectorAll(".content");
+                          divs.forEach(function(div) {
+                              div.style.display = "none";
+                          });
+                      }
+                    </script>
         </head>
         <body class="is-preload">
       
@@ -86,8 +95,9 @@
               <br>
               Ha recibido la beca del de jóvenes creadores que otorga el FONCA 2009/2010, 2012/2013 y 2016, ha recibido el reconocimiento del Sistema Nacional de Creadores Arte (SNCA) en 2019 . <br> En 2014 recibió el Apoyo para escritura de guión que da el IMCINE. Fue nominada por Susan Meiselas para el premio 2012 Rudin Prize for Emerging Photografers for The Norton Museum of Art in west Palm Beach, Fl.  Ha exhibido en muestras colectivas e individuales en Hannover, Madrid, Praga, Rio de Janeiro, Los Angeles y Nueva York. Ha expuesto de manera individual y colectiva. Su trabajo se ha exhibido en muestras colectivas e individuales en Milan, Hannover, Madrid, Praga, Rio de Janeiro, Los Angeles and Nueva York.</span></div>
       
-            
+          <div id="close_content" onclick="showElement('bio')">Close</div>  
           </div>
+          
       
       
           <!-- Footer -->
