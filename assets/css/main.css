@@ -363,7 +363,7 @@ section.special, article.special {
 header p {
   color: rgba(255, 255, 255, 0.5);
   position: relative;
-  margin: 0 0 1.5em 0; }
+  margin: 0 0 0 0; }
 
 header h2 + p {
   font-size: 1.25em;
@@ -802,7 +802,7 @@ button,
 
 @media screen and (max-width: 480px) {
   #header {
-    margin: 0 0 1em 0; } }
+    margin: 0 0 0 0; } }
 
 /* Signup Form */
 #signup-form {
@@ -932,3 +932,25 @@ img{width:100%}
 }
 
 #content{  margin-bottom: 20px;}
+
+
+/* In your CSS */
+.container {
+    display: grid;
+    /* Define grid columns for desktop, for example */
+    grid-template-columns: 1fr 3fr 1fr; /* Or auto, 1fr, auto */
+    /* Define grid rows */
+    grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+    gap: 20px; /* Space between grid items */
+    width: 90%; /* Max width for content */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center the container */
+}
+
+@media (max-width: 768px) {
+    .container {
+        /* On smaller screens, stack elements in a single column */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
