@@ -93,15 +93,20 @@
 </head>
  <!--  BODY -->
 <body class="is-preload">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVVZ2WQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
- <!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVVZ2WQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
       
 <!-- Header -->
-<header id="header" >
-  <h1>EUNICE ADORNO</h1>
-  <p>Mexico City - 2025 </p>
-</header>
+  <header id="header" >
+    <h1>EUNICE ADORNO</h1>
+    <p>Mexico City - <span id="year"></span></p>
+    <div id="contact_links" style="padding-top: 1%; padding-bottom: 1%;"; >
+        <a id="instagram_button" style="padding-right: 1%"; href="https://www.instagram.com/euadorno/" target="_blank"  class="icon brands fa-instagram">
+          <span class="label">Instagram</span>
+        </a>
+        <a id="email_button" href="mailto:euniceadorno.studio@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></div>
+  </header>
 
 <!-- Menu seccion -->
   <div id="menu_items">
@@ -147,6 +152,16 @@
       
      <!-- Scripts -->
      <script src="assets/js/main.js"></script>
+     <script> // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Example: insert into an element with id="year"
+        document.addEventListener("DOMContentLoaded", function() {
+        var yearElem = document.getElementById("year");
+    if (yearElem) {
+      yearElem.textContent = currentYear;
+    }
+  });
+</script>
       
  </body>
 </html>
