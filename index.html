@@ -140,10 +140,8 @@
       
    <!-- Footer -->
      <footer id="footer">
-       <!-- <ul class="copyright">
-         <li>&copy; Eunice Adorno 2024</li>
-      
-       </ul>  -->
+        <ul class="copyright">
+          <li>&copy; Eunice Adorno <span id="copyright_year"></span></li> </ul>
      </footer>
       
      <!-- Scripts -->
@@ -153,8 +151,12 @@
         // Example: insert into an element with id="year"
         document.addEventListener("DOMContentLoaded", function() {
         var yearElem = document.getElementById("year");
+        var copyright_year = document.querySelector("#copyright_year");
     if (yearElem) {
       yearElem.textContent = currentYear;
+    }
+        if (copyright_year) {
+      copyright_year.textContent = currentYear;
     }
   });
 </script>
