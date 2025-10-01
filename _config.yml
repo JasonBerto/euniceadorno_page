@@ -1,0 +1,68 @@
+# Site settings
+title: "Eunice Adorno"
+description: "Eunice Adorno - Portfolio"
+author: "Eunice Adorno"
+email: "euniceadorno.studio@gmail.com"
+url: "https://euniceadorno.com/"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: America/Mexico_City
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "portfolio"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+social:
+  name: Eunice Adorno
+  links:
+    - "https://www.instagram.com/euadorno/"
+    - "mailto:euniceadorno.studio@gmail.com"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - _backup/
+  - .gitignore
+  - .gitattributes
+
+# Include
+include:
+  - _pages
+
+# Sass
+sass:
+  sass_dir: assets/sass
+  style: compressed

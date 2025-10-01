@@ -1,0 +1,43 @@
+projects:
+  - title: "Mujeres Flores"
+    slug: "mujeres-flores"
+    description: "A series exploring femininity and nature"
+    year: 2023
+    category: "portrait"
+    cover_image: "mujeres-flores-cover.jpg"
+    images:
+      - "1_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "2_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "3_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "4_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "5_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "6_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "7_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "8_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "9_Mujeres_Flores_Eunice_Adorno.jpg"
+      - "10_Mujeres_Flores_Eunice_Adorno.jpg"
+    tags: ["portrait", "nature", "femininity", "black-and-white"]
+    location: "Mexico"
+    equipment: "35mm Film"
+  
+  - title: "Desandar"
+    slug: "desandar"
+    description: "A journey through personal narratives"
+    year: 2023
+    category: "documentary"
+    cover_image: "desandar-cover.jpg"
+    images: []
+    tags: ["documentary", "personal", "narrative"]
+    location: "Mexico"
+    equipment: "Digital"
+  
+  - title: "Octubre Rojo"
+    slug: "octubre-rojo"
+    description: "Exploring themes of revolution and change"
+    year: 2023
+    category: "documentary"
+    cover_image: "octubre-rojo-cover.jpg"
+    images: []
+    tags: ["documentary", "revolution", "social", "change"]
+    location: "Mexico"
+    equipment: "Mixed Media"

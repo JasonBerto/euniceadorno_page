@@ -1,0 +1,165 @@
+///
+/// Jekyll Contact Styles
+/// Contact page and form styling
+///
+
+/* Contact Page */
+.contact-page {
+    padding: 2rem 0;
+}
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.contact-item h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-item a:hover {
+    color: #333;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-cta {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.contact-cta h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.contact-cta p {
+    margin: 0 0 1.5rem 0;
+    color: #666;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Responsive Design */
+@include breakpoint('<=medium') {
+    .contact-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .contact-details {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .contact-item {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@include breakpoint('<=small') {
+    .contact-details {
+        flex-direction: column;
+    }
+    
+    .contact-item {
+        min-width: auto;
+    }
+}
