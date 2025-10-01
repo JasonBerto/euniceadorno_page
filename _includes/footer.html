@@ -1,10 +1,6 @@
 <footer class="site-footer">
-    <div class="container">
+    <div class="footer-container">
         <div class="footer-content">
-            <div class="footer-info">
-                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
-            </div>
-            
             <div class="footer-social">
                 <a href="mailto:{{ site.email }}" class="social-link" aria-label="Email">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -17,6 +13,11 @@
                     </svg>
                 </a>
             </div>
+            <div class="footer-info">
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}.   All rights reserved.</p>
+            </div>
+            
+           
         </div>
     </div>
 </footer>
