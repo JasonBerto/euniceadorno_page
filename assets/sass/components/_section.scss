@@ -1,9 +1,10 @@
 /* Section/Article */
 
 	section, article {
-		&.special {
-			text-align: center;
-		}
+		/* UNUSED: No .special class in current templates */
+		// &.special {
+		// 	text-align: center;
+		// }
 	}
 
 	header {

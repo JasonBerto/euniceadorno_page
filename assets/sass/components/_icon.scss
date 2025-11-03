@@ -1,4 +1,6 @@
 /* Icon */
+/* PARTIALLY UNUSED: .icon class used with Font Awesome in footer */
+/* But .solid, .brands modifiers and .label not used in current templates */
 
 	.icon {
 		@include icon;
@@ -6,22 +8,24 @@
 		position: relative;
 
 		> .label {
-			display: none;
+			display: none; /* UNUSED */
 		}
 
 		&:before {
 			line-height: inherit;
 		}
 
-		&.solid {
-			&:before {
-				font-weight: 900;
-			}
-		}
+		/* UNUSED: No .icon.solid in templates */
+		// &.solid {
+		// 	&:before {
+		// 		font-weight: 900;
+		// 	}
+		// }
 
-		&.brands {
-			&:before {
-				font-family: 'Font Awesome 5 Brands';
-			}
-		}
+		/* UNUSED: No .icon.brands in templates */
+		// &.brands {
+		// 	&:before {
+		// 		font-family: 'Font Awesome 5 Brands';
+		// 	}
+		// }
 	}

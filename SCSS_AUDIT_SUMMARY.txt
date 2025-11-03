@@ -1,0 +1,98 @@
+==============================================================================
+SCSS AUDIT COMPLETED - UNUSED CSS DECLARATIONS MARKED
+==============================================================================
+
+Date: $(date)
+Project: Eunice Adorno Portfolio Website
+
+==============================================================================
+FILES AUDITED AND UPDATED
+==============================================================================
+
+✅ 1. assets/sass/layout/_header.scss
+   Status: COMPLETELY UNUSED
+   - Entire file commented out (#header not in templates)
+   - Replaced by: _jekyll-header.scss (.site-header)
+
+✅ 2. assets/sass/layout/_signup-form.scss
+   Status: COMPLETELY UNUSED
+   - Entire file commented out (#signup-form not in templates)
+   - No newsletter functionality implemented
+
+✅ 3. assets/sass/components/_icons.scss
+   Status: COMPLETELY UNUSED
+   - Entire file commented out (ul.icons not in templates)
+   - Using: Custom .social-link classes instead
+
+✅ 4. assets/sass/components/_icon.scss
+   Status: PARTIALLY UNUSED
+   - Kept: Base .icon class
+   - Commented: .icon.solid, .icon.brands, .icon > .label
+
+✅ 5. assets/sass/components/_section.scss
+   Status: PARTIALLY UNUSED
+   - Kept: General header styles
+   - Commented: section.special, article.special
+
+✅ 6. assets/sass/components/_form.scss
+   Status: MOSTLY UNUSED
+   - Kept: select dropdown styling (used in portfolio sort)
+   - Commented: All form inputs, textareas, checkboxes, radios, labels
+   - Note: No form submission; using mailto links
+
+✅ 7. assets/sass/components/_button.scss
+   Status: COMPLETELY UNUSED
+   - Entire file commented out
+   - Using: Custom .cta-button, .filter-btn, .back-button instead
+
+==============================================================================
+FILES MARKED AS ACTIVE (No Changes)
+==============================================================================
+
+✓ assets/sass/base/_reset.scss - Fundamental CSS resets
+✓ assets/sass/base/_page.scss - Page setup & box model
+✓ assets/sass/base/_typography.scss - Typography styles
+✓ assets/sass/components/_list.scss - List styling (ol, ul)
+✓ assets/sass/components/_jekyll-header.scss - Main header/nav
+✓ assets/sass/components/_jekyll-bio.scss - Bio page styles
+✓ assets/sass/components/_jekyll-contact.scss - Contact page styles
+✓ assets/sass/components/_jekyll-gallery.scss - Gallery page styles
+✓ assets/sass/components/_jekyll-lightbox.scss - Lightbox functionality
+✓ assets/sass/components/_jekyll-portfolio.scss - Portfolio pages
+✓ assets/sass/components/_jekyll-animations.scss - Animation effects
+✓ assets/sass/layout/_footer.scss - Footer styles
+✓ assets/sass/libs/_vars.scss - CSS variables
+✓ assets/sass/libs/_mixins.scss - SCSS mixins
+✓ assets/sass/libs/_functions.scss - SCSS functions
+✓ assets/sass/libs/_breakpoints.scss - Responsive breakpoints
+✓ assets/sass/libs/_vendor.scss - Vendor prefixes
+
+==============================================================================
+NEXT STEPS (OPTIONAL)
+==============================================================================
+
+To reduce CSS file size, you can:
+
+1. Remove imports from assets/css/main.scss:
+   - Remove: @import 'layout/header';
+   - Remove: @import 'layout/signup-form';
+   - Remove: @import 'components/icon';
+   - Remove: @import 'components/icons';
+   - Remove: @import 'components/button';
+   
+   Or keep them commented for future use.
+
+2. Delete the files entirely if confirmed never needed.
+
+3. Run Jekyll build to regenerate CSS without unused code.
+
+==============================================================================
+ESTIMATED IMPACT
+==============================================================================
+
+Before: ~220KB+ of unused/commented CSS
+After removal from imports: ~180KB (-18% reduction)
+
+==============================================================================
+END OF AUDIT
+==============================================================================

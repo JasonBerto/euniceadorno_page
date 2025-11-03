@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.currentSlide = 0;
             this.totalSlides = this.slides.length;
             this.autoPlayInterval = null;
-            this.autoPlayDelay = 9000; // 8 seconds to match Ken Burns animation
+            this.autoPlayDelay = 9000; // 9 seconds to match Ken Burns animation
             this.kenBurnsTimeout = null;
             
             this.init();

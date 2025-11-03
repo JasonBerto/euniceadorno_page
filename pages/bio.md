@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: bio
 title: Bio
 permalink: /bio/
 ---
