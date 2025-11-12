@@ -1,29 +1,15 @@
 # Eunice Adorno Photography Portfolio
 
-A modern, mobile-first photography portfolio built with Jekyll and GitHub Pages, featuring sophisticated animations, advanced interactions, and optimized performance.
+A minimal, elegant photography portfolio built with Jekyll, featuring a fixed sidebar navigation and grid-based project display. Based on the [Index theme](https://index.jekyllthemes.io/) design philosophy.
 
 ## 🌟 Features
 
-### **Modern Design**
-- **Mobile-First**: Optimized for smartphone viewing
-- **Responsive Layout**: Works seamlessly on all device sizes
-- **Sophisticated Animations**: Scroll-triggered reveals and micro-interactions
-- **Custom Cursor**: Desktop-only interactive cursor
-- **Parallax Effects**: Immersive scroll experiences
-
-### **Portfolio Management**
-- **Lightbox Gallery**: Full-screen image viewing with navigation
-- **Advanced Filtering**: Category and sorting options
-- **Touch Gestures**: Swipe navigation for mobile
-- **Keyboard Controls**: Arrow keys and Escape for accessibility
-- **Image Optimization**: Lazy loading and performance monitoring
-
-### **Performance & Accessibility**
-- **Core Web Vitals**: Real-time performance monitoring
-- **Lazy Loading**: Efficient image loading with Intersection Observer
-- **Hardware Acceleration**: Smooth 60fps animations
-- **Screen Reader Support**: ARIA labels and semantic HTML
-- **Touch-Friendly**: 44px minimum touch targets
+- **Fixed Sidebar Navigation** - Always-visible navigation with clean, minimal design
+- **Responsive Grid Layout** - Automatically adjusts portfolio grid based on screen size
+- **Hover Overlays** - Interactive project previews with smooth transitions
+- **Mobile-First Design** - Optimized for all devices from mobile to desktop
+- **Fast & Lightweight** - Minimal dependencies, compressed CSS, system fonts
+- **SEO Optimized** - Built-in SEO tags and sitemap generation
 
 ## 🚀 Quick Start
 
@@ -33,25 +19,19 @@ A modern, mobile-first photography portfolio built with Jekyll and GitHub Pages,
 
 ### Installation
 
-1. **Clone the repository**
 ```bash
-git clone https://github.com/euniceadorno/euniceadorno_page.git
+# Clone the repository
+git clone https://github.com/yourusername/euniceadorno_page.git
 cd euniceadorno_page
-```
 
-2. **Install dependencies**
-```bash
+# Install dependencies
 bundle install
-```
 
-3. **Serve locally**
-```bash
-bundle exec jekyll serve
-```
+# Serve locally with live reload
+bundle exec jekyll serve --livereload
 
-4. **Open in browser**
-```
-http://localhost:4000
+# Open in browser
+# http://localhost:4000
 ```
 
 ## 📁 Project Structure
@@ -60,215 +40,171 @@ http://localhost:4000
 euniceadorno_page/
 ├── _config.yml              # Site configuration
 ├── _layouts/                # Page templates
-│   ├── default.html         # Base layout
-│   ├── page.html           # Page layout
-│   └── portfolio.html      # Portfolio layout
-├── _includes/              # Reusable components
-│   ├── header.html         # Navigation
-│   └── footer.html         # Footer
-├── _data/                  # Data files
-│   └── portfolio.yml       # Portfolio projects
+│   ├── default.html         # Base layout with sidebar
+│   ├── page.html           # Static pages (About, Contact)
+│   └── project.html        # Individual portfolio projects
+├── pages/                  # Site pages
+│   ├── bio.md              # About page
+│   └── contact.md          # Contact page
+├── portfolio/              # Portfolio projects
+│   ├── desandar.md
+│   ├── mujeres-flores.md
+│   └── octubre-rojo.md
 ├── assets/                 # Static assets
 │   ├── css/
-│   │   └── main.scss      # Main stylesheet
+│   │   └── main.scss      # All theme styles
 │   ├── js/
-│   │   └── main.js        # JavaScript functionality
-│   └── images/            # Images organized by category
-├── pages/                  # Main site pages
-├── portfolio/              # Individual portfolio projects
-└── index.md               # Homepage
+│   │   └── main.js        # Minimal JavaScript
+│   └── images/            # Images organized by project
+└── index.html             # Homepage with portfolio grid
 ```
 
-## 🎨 Customization
+## 🎨 Adding New Projects
 
-### Adding Portfolio Projects
+### 1. Create Project File
 
-1. **Add project data** to `_data/portfolio.yml`:
-```yaml
-projects:
-  - title: "Project Name"
-    slug: "project-slug"
-    description: "Project description"
-    year: 2023
-    category: "portrait"
-    cover_image: "cover.jpg"
-    images:
-      - "image1.jpg"
-      - "image2.jpg"
-    tags: ["tag1", "tag2"]
-    location: "Mexico"
-    equipment: "35mm Film"
-```
+Create a new markdown file in the `portfolio/` directory:
 
-2. **Create project page** in `portfolio/project-slug.md`:
 ```markdown
 ---
-layout: portfolio
-title: Project Name
-description: Project description
-year: 2023
+layout: project
+title: Your Project Title
+description: A brief description of the project
+year: 2024
+slug: your-project-slug
 images:
   - "image1.jpg"
   - "image2.jpg"
-permalink: /portfolio/project-slug/
+  - "image3.jpg"
 ---
 
-Project description and content here.
+Your project description goes here. This content will appear below the images.
 ```
 
-### Customizing Animations
+### 2. Add Project Images
 
-The site uses a sophisticated animation system with data attributes:
+1. Create a folder: `/portfolio/[slug]/`
+2. Add your images to this folder
+3. The first image in the `images` array will be used as the cover on the homepage
+
+Example:
+```
+/portfolio/
+  └── your-project-slug/
+      ├── image1.jpg  (← cover image)
+      ├── image2.jpg
+      └── image3.jpg
+```
+
+## ⚙️ Customization
+
+### Site Configuration
+
+Edit `_config.yml` to customize site settings:
+
+```yaml
+title: "Your Name"
+description: "Your site description"
+email: "your.email@example.com"
+url: "https://yoursite.com"
+```
+
+### Styling
+
+Edit `/assets/css/main.scss` to customize colors and design:
+
+```scss
+// Change these variables
+$sidebar-width: 280px;
+$primary-color: #000;
+$background-color: #fff;
+$text-color: #333;
+```
+
+### Navigation
+
+Edit `_layouts/default.html` to modify sidebar navigation:
 
 ```html
-<!-- Scroll-triggered animations -->
-<div data-animate="fade-up" data-delay="200">
-  Content that fades up when scrolled into view
-</div>
-
-<!-- Staggered animations -->
-<div data-animate="stagger">
-  <div data-stagger-item>Item 1</div>
-  <div data-stagger-item>Item 2</div>
-</div>
-
-<!-- Parallax effects -->
-<div data-parallax="0.5">
-  Content that moves at 50% scroll speed
-</div>
+<nav class="main-nav">
+    <ul>
+        <li><a href="/">Projects</a></li>
+        <li><a href="/bio/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+    </ul>
+</nav>
 ```
 
-### Available Animation Types
-- `fade-up`: Slides up and fades in
-- `fade-left`: Slides from left and fades in
-- `fade-right`: Slides from right and fades in
-- `scale-up`: Scales up and fades in
-- `slide-up`: Slides up from bottom
-- `stagger`: Animates children sequentially
+## 📱 Responsive Design
 
-## 🎯 Performance Features
+The theme adapts to different screen sizes:
 
-### **Image Optimization**
-- **Lazy Loading**: Images load only when needed
-- **WebP Support**: Modern image formats with fallbacks
-- **Responsive Images**: Multiple sizes for different screens
-- **Loading States**: Skeleton screens and placeholders
+- **Desktop (1024px+)**: Full sidebar (280px) with multi-column grid
+- **Tablet (768px - 1023px)**: Smaller sidebar (240px) with adjusted grid
+- **Mobile (< 768px)**: Horizontal navigation bar with single-column grid
 
-### **Animation Performance**
-- **Hardware Acceleration**: Uses transform and opacity
-- **RequestAnimationFrame**: Smooth 60fps animations
-- **Intersection Observer**: Efficient scroll detection
-- **Cubic-Bezier Easing**: Natural animation curves
+## 🚀 Deployment
 
-### **Core Web Vitals Monitoring**
-- **LCP**: Largest Contentful Paint tracking
-- **FID**: First Input Delay monitoring
-- **CLS**: Cumulative Layout Shift measurement
-- **Real-time Metrics**: Performance dashboard
+### GitHub Pages
 
-## 📱 Mobile Features
+1. Push to your repository:
+```bash
+git add .
+git commit -m "Update portfolio"
+git push origin main
+```
 
-### **Touch Interactions**
-- **Swipe Gestures**: Navigate galleries with swipes
-- **Haptic Feedback**: Vibration on supported devices
-- **Touch Feedback**: Visual response to touch
-- **Pinch to Zoom**: Image zoom functionality
+2. Enable GitHub Pages in repository settings:
+   - Go to Settings → Pages
+   - Select "Deploy from a branch"
+   - Choose "main" branch
 
-### **Mobile Optimizations**
-- **Reduced Motion**: Respects user preferences
-- **Touch Targets**: Minimum 44px for accessibility
-- **Viewport Meta**: Proper mobile scaling
-- **Fast Tap**: Eliminates click delays
+### Custom Domain
 
-## 🔧 Development
+1. Add `CNAME` file with your domain
+2. Configure DNS records with your domain provider
 
-### **Local Development**
+### Manual Deployment
+
+```bash
+# Build the site
+bundle exec jekyll build
+
+# Deploy _site/ folder to your server
+rsync -av _site/ user@server:/path/to/website/
+```
+
+## 🎯 Performance
+
+The Index theme is optimized for performance:
+
+- ✅ **Minimal Dependencies** - No jQuery or heavy frameworks
+- ✅ **Compressed CSS** - Single minified stylesheet
+- ✅ **System Fonts** - No web font loading delays
+- ✅ **Lazy Loading Ready** - Easy to implement for images
+- ✅ **Fast Loading** - Optimized for Core Web Vitals
+
+## 📖 Documentation
+
+- **Theme Documentation**: See `INDEX_THEME_README.md` for detailed theme guide
+- **Migration Summary**: See `THEME_MIGRATION_SUMMARY.md` for implementation details
+- **Jekyll Docs**: [https://jekyllrb.com/docs/](https://jekyllrb.com/docs/)
+
+## 🛠️ Development
+
 ```bash
 # Install dependencies
 bundle install
 
-# Serve with live reload
+# Start development server
 bundle exec jekyll serve --livereload
 
 # Build for production
 bundle exec jekyll build
+
+# Clean build artifacts
+bundle exec jekyll clean
 ```
-
-### **Adding New Features**
-
-1. **CSS**: Add styles to `assets/css/main.scss`
-2. **JavaScript**: Add functionality to `assets/js/main.js`
-3. **Layouts**: Create new layouts in `_layouts/`
-4. **Components**: Add reusable components to `_includes/`
-
-### **Testing**
-
-```bash
-# Test Jekyll build
-bundle exec jekyll build
-
-# Validate HTML
-html-validate _site/
-
-# Check accessibility
-axe _site/
-
-# Performance audit
-lighthouse _site/index.html
-```
-
-## 🚀 Deployment
-
-### **GitHub Pages**
-
-1. **Push to main branch**
-```bash
-git add .
-git commit -m "Deploy portfolio"
-git push origin main
-```
-
-2. **Enable GitHub Pages**
-   - Go to repository Settings
-   - Navigate to Pages section
-   - Select "Deploy from a branch"
-   - Choose "main" branch and "/ (root)" folder
-
-3. **Custom Domain** (Optional)
-   - Add `CNAME` file with your domain
-   - Configure DNS records
-
-### **Manual Deployment**
-
-```bash
-# Build site
-bundle exec jekyll build
-
-# Deploy _site/ folder to your web server
-rsync -av _site/ user@server:/path/to/website/
-```
-
-## 📊 Analytics & SEO
-
-### **Built-in SEO**
-- **Meta Tags**: Automatic meta tag generation
-- **Open Graph**: Social media sharing optimization
-- **Sitemap**: Automatic XML sitemap generation
-- **Structured Data**: JSON-LD for search engines
-
-### **Performance Monitoring**
-- **Core Web Vitals**: Real-time performance tracking
-- **Image Loading**: Load time monitoring
-- **Animation Performance**: FPS tracking
-- **Memory Usage**: Resource monitoring
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## 📄 License
 
@@ -276,18 +212,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Email**: euniceadorno.studio@gmail.com
-- **Instagram**: [@euadorno](https://www.instagram.com/euadorno/)
-- **Website**: [euniceadorno.github.io/euniceadorno_page](https://euniceadorno.github.io/euniceadorno_page)
+**Eunice Adorno**
+- Email: [euniceadorno.studio@gmail.com](mailto:euniceadorno.studio@gmail.com)
+- Instagram: [@euadorno](https://www.instagram.com/euadorno/)
+- Website: [euniceadorno.com](https://euniceadorno.com/)
 
-## 🙏 Acknowledgments
+## 🙏 Credits
 
-- **Jekyll**: Static site generator
-- **GitHub Pages**: Hosting platform
-- **Font Awesome**: Icons
-- **Modern CSS**: Advanced styling techniques
-- **Web Standards**: Accessibility and performance
+- Theme inspired by: [Index Jekyll Theme](https://index.jekyllthemes.io/)
+- Built with: [Jekyll](https://jekyllrb.com/)
+- Hosted on: [GitHub Pages](https://pages.github.com/)
 
 ---
 
-Built with ❤️ for photographers who want to showcase their work beautifully.
+**Theme Version**: 1.0 (November 2025)  
+Built for photographers who want to showcase their work with minimal distraction.

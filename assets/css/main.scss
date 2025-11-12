@@ -1,54 +1,475 @@
 ---
 ---
 
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
+// Index Theme Variables
+$sidebar-width: 280px;
+$primary-color: #000;
+$background-color: #fff;
+$text-color: #333;
+$border-color: #e0e0e0;
+$overlay-color: rgba(0, 0, 0, 0.8);
+$transition-speed: 0.3s;
 
+// Reset & Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $text-color;
+    background-color: $background-color;
+}
 
-// Breakpoints.
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity $transition-speed;
+    
+    &:hover {
+        opacity: 0.7;
+    }
+}
 
-	@include breakpoints((
-		xlarge:   ( 1281px,  1680px ),
-		large:    ( 981px,   1280px ),
-		medium:   ( 737px,   980px  ),
-		small:    ( 481px,   736px  ),
-		xsmall:   ( 361px,   480px  ),
-		xxsmall:  ( null,    360px  ),
-		short:    '(max-height: 640px)'
-	));
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-// Base.
+// Sidebar Navigation
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $sidebar-width;
+    height: 100vh;
+    background-color: $primary-color;
+    color: $background-color;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .site-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        
+        a {
+            color: $background-color;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    
+    .main-nav {
+        flex: 1;
+        
+        ul {
+            list-style: none;
+            
+            li {
+                margin-bottom: 20px;
+                
+                a {
+                    font-size: 18px;
+                    color: $background-color;
+                    display: block;
+                    padding: 5px 0;
+                    
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+    
+    .sidebar-footer {
+        margin-top: auto;
+        font-size: 14px;
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            
+            a {
+                color: $background-color;
+                opacity: 0.8;
+                transition: opacity $transition-speed, transform $transition-speed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                &:hover {
+                    opacity: 1;
+                    transform: translateY(-2px);
+                }
+                
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        
+        p {
+            opacity: 0.6;
+        }
+    }
+}
 
-	@import 'base/reset';
-	@import 'base/page';
-	@import 'base/bg';
-	@import 'base/typography';
+// Main Content Area
+.main-content {
+    margin-left: $sidebar-width;
+    min-height: 100vh;
+    padding: 40px;
+}
 
-// Components.
+// Portfolio Grid
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
 
-	@import 'components/section';
-	@import 'components/icon';
-	@import 'components/list';
-	@import 'components/icons';
-	@import 'components/form';
-	@import 'components/button';
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    aspect-ratio: 4 / 3;
+    cursor: pointer;
+    display: block;
+    
+    .portfolio-image {
+        width: 100%;
+        height: 100%;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform $transition-speed;
+        }
+    }
+    
+    .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $overlay-color;
+        color: $background-color;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity $transition-speed;
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+    
+    &:hover {
+        .portfolio-image img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            opacity: 1;
+        }
+    }
+}
 
-// Layout.
+// Page Content
+.page-content {
+    max-width: 800px;
+    
+    .page-header {
+        margin-bottom: 40px;
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .page-body {
+        font-size: 18px;
+        line-height: 1.8;
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 40px 0 20px;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 30px 0 15px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+            
+            li {
+                margin-bottom: 10px;
+            }
+        }
+        
+        a {
+            color: $primary-color;
+            text-decoration: underline;
+            
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
 
-	@import 'layout/header';
-	@import 'layout/signup-form';
-	@import 'layout/footer';
+// Project Content
+.project-content {
+    max-width: 1200px;
+    
+    .project-header {
+        margin-bottom: 60px;
+        
+        .back-link {
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: $text-color;
+            
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .project-description {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .project-year {
+            font-size: 16px;
+            color: #999;
+        }
+    }
+    
+    .project-body {
+        .project-gallery {
+            margin-bottom: 60px;
+            
+            .project-image {
+                margin-bottom: 40px;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        
+        .project-text {
+            font-size: 18px;
+            line-height: 1.8;
+            
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
 
-// Jekyll Custom Components.
+// Contact Page
+.contact-form {
+    max-width: 600px;
+    
+    .form-group {
+        margin-bottom: 25px;
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid $border-color;
+            font-family: inherit;
+            font-size: 16px;
+            
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+            }
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+    }
+    
+    .submit-btn {
+        background-color: $primary-color;
+        color: $background-color;
+        padding: 12px 30px;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity $transition-speed;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
 
-	@import 'components/jekyll-header';
-	@import 'components/jekyll-portfolio';
-	@import 'components/jekyll-gallery';
-	@import 'components/jekyll-contact';
-	@import 'components/jekyll-bio';
-	@import 'components/jekyll-lightbox';
-	@import 'components/jekyll-animations';
+// Responsive Design
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 240px;
+    }
+    
+    .main-content {
+        margin-left: 240px;
+        padding: 30px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        
+        .sidebar-content {
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .site-title {
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+        
+        .main-nav {
+            flex: 0;
+            
+            ul {
+                display: flex;
+                gap: 20px;
+                
+                li {
+                    margin-bottom: 0;
+                    
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        
+        .sidebar-footer {
+            margin-left: auto;
+            
+            .social-links {
+                margin-bottom: 0;
+            }
+            
+            p {
+                display: none;
+            }
+        }
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .page-content {
+        .page-header h1 {
+            font-size: 36px;
+        }
+    }
+    
+    .project-content {
+        .project-header h1 {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        .sidebar-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .main-nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

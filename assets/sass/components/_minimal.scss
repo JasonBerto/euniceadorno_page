@@ -1,0 +1,216 @@
+///
+/// Minimal Barebones Styles
+/// Clean, simple starting point - add complexity as needed
+///
+
+// ========================================
+// HEADER & NAVIGATION
+// ========================================
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.site-logo:hover {
+    color: #666;
+}
+
+.site-logo h1 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+// Mobile menu button (hidden by default, shown on mobile)
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+
+// ========================================
+// LAYOUT
+// ========================================
+
+.main-content {
+    padding-top: 80px; // Space for fixed header
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page {
+    padding: 2rem 0;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0 0 1rem;
+}
+
+.page-content {
+    max-width: 900px;
+}
+
+
+// ========================================
+// SECTIONS
+// ========================================
+
+section {
+    padding: 3rem 0;
+}
+
+
+// ========================================
+// BUTTONS
+// ========================================
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #333;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #555;
+}
+
+.cta-button.primary {
+    background: #1e806b;
+}
+
+.cta-button.primary:hover {
+    background: #156b59;
+}
+
+
+// ========================================
+// SKIP LINK (Accessibility)
+// ========================================
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 10000;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+
+// ========================================
+// RESPONSIVE - MOBILE
+// ========================================
+
+@include breakpoint('<=medium') {
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .site-header {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
+

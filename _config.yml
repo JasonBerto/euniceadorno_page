@@ -1,6 +1,6 @@
 # Site settings
 title: "Eunice Adorno"
-description: "Eunice Adorno"
+description: "Photography and visual narratives"
 author: "Eunice Adorno"
 email: "euniceadorno.studio@gmail.com"
 url: "https://euniceadorno.com/"
@@ -16,7 +16,7 @@ timezone: America/Mexico_City
 collections:
   portfolio:
     output: true
-    permalink: /:collection/:name/
+    permalink: /portfolio/:name/
 
 # Defaults
 defaults:
@@ -29,7 +29,7 @@ defaults:
       path: ""
       type: "portfolio"
     values:
-      layout: "portfolio"
+      layout: "project"
 
 # Plugins
 plugins:
@@ -58,11 +58,6 @@ exclude:
   - .gitignore
   - .gitattributes
 
-# Include
-include:
-  - _pages
-
 # Sass
 sass:
-  sass_dir: assets/sass
   style: compressed

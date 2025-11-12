@@ -1,10 +1,11 @@
 ---
-layout: bio
-title: Bio
+layout: page
+title: About
 permalink: /bio/
 ---
 
 # Eunice Adorno
+
 
 **Mexico City (1982)**
 
