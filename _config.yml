@@ -44,6 +44,10 @@ social:
     - "https://www.instagram.com/euadorno/"
     - "mailto:euniceadorno.studio@gmail.com"
 
+# Include in processing
+include:
+  - pages
+
 # Exclude from processing
 exclude:
   - README.md
