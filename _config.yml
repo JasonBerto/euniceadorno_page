@@ -2,7 +2,6 @@
 title: "Eunice Adorno"
 description: "Photography and visual narratives"
 author: "Eunice Adorno"
-email: "euniceadorno.studio@gmail.com"
 url: "https://euniceadorno.com/"
 baseurl: ""
 
@@ -42,7 +41,6 @@ social:
   name: Eunice Adorno
   links:
     - "https://www.instagram.com/euadorno/"
-    - "mailto:euniceadorno.studio@gmail.com"
 
 # Include in processing
 include:

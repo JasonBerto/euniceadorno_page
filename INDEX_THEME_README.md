@@ -95,7 +95,6 @@ Edit `_config.yml`:
 title: "Eunice Adorno"
 description: "Photography and visual narratives"
 author: "Eunice Adorno"
-email: "euniceadorno.studio@gmail.com"
 url: "https://euniceadorno.com/"
 ```
 
