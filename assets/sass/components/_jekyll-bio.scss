@@ -1,0 +1,147 @@
+///
+/// Jekyll Bio Styles
+/// Bio page and about section styling
+///
+
+/* Bio Page */
+.bio-page {
+    padding: 2rem 0;
+}
+
+.bio-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.bio-image {
+    flex: 1;
+    text-align: center;
+}
+
+.bio-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+    flex: 2;
+}
+
+.bio-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.bio-text h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.bio-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.bio-text a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.bio-text a:hover {
+    color: #666;
+    border-bottom-color: #666;
+}
+
+/* About Preview Section */
+.about-preview {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@include breakpoint('<=medium') {
+    .bio-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .bio-text h1 {
+        font-size: 2rem;
+    }
+    
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@include breakpoint('<=small') {
+    .bio-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .bio-text h2 {
+        font-size: 1.3rem;
+    }
+    
+    .bio-text p {
+        font-size: 1rem;
+    }
+}

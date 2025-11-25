@@ -1,0 +1,412 @@
+///
+/// Header & Navigation Styles
+/// Clean, modern header with responsive navigation
+///
+
+// ========================================
+// SKIP LINK (Accessibility)
+// ========================================
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: top 0.3s ease;
+    
+    &:focus {
+        top: 6px;
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+}
+
+
+// ========================================
+// HEADER BASE
+// ========================================
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    //background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 80px;
+    
+    // Fallback for browsers without backdrop-filter support
+    @supports not (backdrop-filter: blur(10px)) {
+        //background-color: rgba(255, 255, 255, 0.98);
+    }
+    
+    // Enhanced styling on scroll
+    &.scrolled {
+        //background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+
+// ========================================
+// LOGO
+// ========================================
+
+.site-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    flex-shrink: 0;
+    
+    &:hover {
+        color: #1e806b;
+    }
+    
+    h1 {
+        margin: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: 1;
+    }
+}
+
+
+// ========================================
+// NAVIGATION - DESKTOP
+// ========================================
+
+.main-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+    
+    li {
+        position: relative;
+    }
+    
+    a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: color 0.3s ease;
+        display: block;
+        
+        // Underline effect
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1e806b;
+            transition: width 0.3s ease;
+        }
+        
+        &:hover {
+            color: #1e806b;
+            
+            &::after {
+                width: 100%;
+            }
+        }
+        
+        // Active page state
+        &.active {
+            color: #1e806b;
+            font-weight: 600;
+            
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// ========================================
+// HAMBURGER MENU BUTTON
+// ========================================
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    
+    &:hover {
+        opacity: 0.7;
+    }
+    
+    &:focus {
+        outline: 2px solid #1e806b;
+        outline-offset: 4px;
+    }
+    
+    span {
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+}
+
+
+// ========================================
+// RESPONSIVE - MOBILE/TABLET
+// ========================================
+
+@include breakpoint('<=medium') {
+    .site-header {
+        height: 70px;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    // Show hamburger button
+    .nav-toggle {
+        display: flex;
+        order: 2;
+    }
+    
+    .main-nav {
+        justify-content: flex-end;
+        flex: 1;
+    }
+    
+    // Mobile menu dropdown
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 128, 107, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        padding: 1.5rem 2rem;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        
+        // Hidden by default
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        
+        // Active state
+        &.active {
+            text-align: center;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        li {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            // Staggered animation
+            &:nth-child(1) { animation-delay: 0.05s; }
+            &:nth-child(2) { animation-delay: 0.1s; }
+            &:nth-child(3) { animation-delay: 0.15s; }
+            &:nth-child(4) { animation-delay: 0.2s; }
+            &:nth-child(5) { animation-delay: 0.25s; }
+        }
+        
+        // Active menu items slide in
+        &.active li {
+            animation: slideInDown 0.4s ease forwards;
+        }
+        
+        a {
+            color: #ffffff;
+            font-size: 1.1rem;
+            padding: 1rem 0;
+            
+            &::after {
+                display: none; // Remove underline effect
+            }
+            
+            &:hover {
+                color: #f0f0f0;
+                padding-left: 0.5rem;
+            }
+            
+            &.active {
+                color: #ffffff;
+                font-weight: 600;
+                background: rgba(255, 255, 255, 0.1);
+                padding-left: 0.5rem;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+
+// ========================================
+// RESPONSIVE - SMALL MOBILE
+// ========================================
+
+@include breakpoint('<=small') {
+    .site-header {
+        height: 60px;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .site-logo {
+        font-size: 1.25rem;
+    }
+    
+    .nav-menu {
+        top: 60px;
+        max-height: calc(100vh - 60px);
+        padding: 1rem 1.5rem;
+        
+        a {
+            font-size: 1rem;
+            padding: 0.875rem 0;
+        }
+    }
+}
+
+
+// ========================================
+// ANIMATIONS
+// ========================================
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+// ========================================
+// MAIN CONTENT OFFSET
+// ========================================
+
+.main-content {
+    padding-top: 80px; // Match header height
+    
+    @include breakpoint('<=medium') {
+        padding-top: 70px;
+    }
+    
+    @include breakpoint('<=small') {
+        padding-top: 60px;
+    }
+}
+
+// Additional spacing for page header
+.page-header {
+    padding: 2rem 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+    @include breakpoint('<=medium') {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    @include breakpoint('<=small') {
+        padding: 1.5rem 1rem 0.75rem;
+    }
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    
+    @include breakpoint('<=medium') {
+        font-size: 2rem;
+    }
+    
+    @include breakpoint('<=small') {
+        font-size: 1.75rem;
+    }
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+    
+    @include breakpoint('<=medium') {
+        padding: 0 1.5rem 3rem;
+    }
+    
+    @include breakpoint('<=small') {
+        padding: 0 1rem 2rem;
+    }
+}
+

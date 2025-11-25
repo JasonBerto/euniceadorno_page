@@ -1,153 +1,22 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TVVZ2WQ');
-  </script>
-  <!-- End Google Tag Manager -->
-  <title>Eunice Adorno</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+---
+layout: default
+---
 
-  <!-- Scripts -->
-  
-  <!-- <script>
-    function showElement(id) {
-      // Hide all content divs
-      var contents = document.querySelectorAll(".content");
-      contents.forEach(function(content) {
-        content.style.display = "none";
-      });
-  
-      // Hide all submenus
-      var submenus = document.querySelectorAll(".submenu");
-      submenus.forEach(function(submenu) {
-        submenu.style.display = "none";
-      });
-  
-      // Show the clicked div
-      var clickedDiv = document.getElementById(id);
-      if (clickedDiv) {
-        clickedDiv.style.display = "";
-      }
-  
-      // Show the submenu if the portfolio is clicked
-      if (id === 'portfolio') {
-        var portfolioSubmenu = document.getElementById('portfolio_submenu');
-        if (portfolioSubmenu) {
-          portfolioSubmenu.style.display = "block";
-        }
-      }
-    }
-  </script> 
-    <script>
-    function hideElement() {
-    // Hide all divs
-    var divs = document.querySelectorAll(".content");
-    divs.forEach(function(div) {div.style.display = "none";});}
-    </script>-->
-  <script>
-    function loadContent(page) {
-      fetch('pages/' + page + '.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('content_text').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading content:', error));
-    }
-  </script>
-  <script>
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-</script>
-
-  <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .image-grid {
-            display: block;
-            max-width: 80vw;
-            margin: auto;
-            padding: 20px;
-        }
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 2px;
-            padding-bottom: 1em;
-        }
-        #back_top{
-          text-align: center;
-
-        }
-
-    </style>  
-</head>
- <!--  BODY -->
-<body class="is-preload">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVVZ2WQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
- <!-- End Google Tag Manager (noscript) -->
-      
-<!-- Header -->
-<header id="header" >
-  <h1>EUNICE ADORNO</h1>
-  <p>Mexico City - 2025 </p>
-</header>
-
-<!-- Menu seccion -->
-  <div id="menu_items">
-    <ul class="menu_items icons">
-      <li class="m_portfolio"onclick="showElement('portfolio_submenu')">Portfolio</li>
-
-             <!-- 
-            <li class="m_books"><a href="#books" onclick="showElement('books')"><span>Books</span></a></li>
-            <li class="m_commisions"><a href="#commisions" onclick="showElement('comissions')"><span>Commisions</span></a></li>
-              -->
-      <li class="m_bio"><a href="#bio" onclick="loadContent('bio')" ><span>Bio</span></a></li>
-    </ul>
-    <ul class="submenu icons" id="portfolio_submenu" >
-      <li><a href="#mujeres_flores" onclick="loadContent('mujeres_flores')">Mujeres Flores</a></li>
-       <!-- <li><a href="#octubre_rojo" onclick="loadContent('octubre_rojo')">Octubre Rojo</a></li>
-      <li><a href="#desecando" onclick="loadContent('desecando')">Desecando</a></li>-->
-</ul>
-    </div>
-          
-    <!-- Content Section -->
-<div id="content_text" class="content" ></div>
-<div id="content_images" class="content"  ></div>
-   
-    
-
-
-
-          </div>
-          
-      
-      
-   <!-- Footer -->
-     <footer id="footer">
-       <ul class="icons">
-         <li><a id="instagram_button" href="https://www.instagram.com/euadorno/" target="_blank"  class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-         <li><a id="email_button" href="mailto:euniceadorno.studio@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-       </ul>
-       <!-- <ul class="copyright">
-         <li>&copy; Eunice Adorno 2024</li>
-      
-       </ul>  -->
-     </footer>
-      
-     <!-- Scripts -->
-     <script src="assets/js/main.js"></script>
-      
- </body>
-</html>
+<div class="portfolio-grid">
+    {% for project in site.portfolio %}
+    <a href="{{ project.url | relative_url }}" class="portfolio-item">
+        <div class="portfolio-image">
+            {% if project.images and project.images.size > 0 %}
+            <img src="{{ '/portfolio/' | append: project.slug | append: '/' | append: project.images[0] | relative_url }}" alt="{{ project.title }}">
+            {% else %}
+            <img src="{{ '/assets/images/placeholder.svg' | relative_url }}" alt="{{ project.title }}">
+            {% endif %}
+        </div>
+        <div class="portfolio-overlay">
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.description }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
 

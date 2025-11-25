@@ -1,0 +1,65 @@
+# Site settings
+title: "Eunice Adorno"
+description: "Photography and visual narratives"
+author: "Eunice Adorno"
+url: "https://euniceadorno.com/"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: America/Mexico_City
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "project"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+social:
+  name: Eunice Adorno
+  links:
+    - "https://www.instagram.com/euadorno/"
+
+# Include in processing
+include:
+  - pages
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - _backup/
+  - .gitignore
+  - .gitattributes
+
+# Sass
+sass:
+  style: compressed
