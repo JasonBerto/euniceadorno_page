@@ -11,7 +11,7 @@ Added Instagram and Email social links to the sidebar footer with elegant SVG ic
 ## Features
 
 ✅ **Instagram Icon** - Links to [@euadorno](https://www.instagram.com/euadorno/)  
-✅ **Email Icon** - Opens mail client to euniceadorno.studio@gmail.com  
+✅ **Email Icon** - Opens mail client to 
 ✅ **SVG Icons** - Clean, scalable vector graphics  
 ✅ **Hover Effects** - Icons lift up slightly on hover  
 ✅ **Accessible** - Includes aria-labels for screen readers  

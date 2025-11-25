@@ -213,7 +213,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Eunice Adorno**
-- Email: [euniceadorno.studio@gmail.com](mailto:euniceadorno.studio@gmail.com)
 - Instagram: [@euadorno](https://www.instagram.com/euadorno/)
 - Website: [euniceadorno.com](https://euniceadorno.com/)
 
