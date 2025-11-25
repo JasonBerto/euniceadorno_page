@@ -1,22 +1,34 @@
 ---
 layout: project
 title: Mujeres Flores
-description: A series exploring femininity and nature
-year: 2023
+description: 
+year: 2011 
 slug: mujeres-flores
 images:
   - "1_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "2_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "3_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "4_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "5_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "6_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "7_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "8_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "9_Mujeres_Flores_Eunice_Adorno.jpg"
-  - "10_Mujeres_Flores_Eunice_Adorno.jpg"
 ---
 
-This series explores the intimate relationship between women and nature, creating visual poetry that speaks to themes of growth, transformation, and resilience. Each image captures moments of vulnerability and strength, revealing the complex beauty of feminine experience.
 
-The work examines how women navigate their relationship with the natural world, finding parallels between personal growth and the cycles of nature. Through careful composition and natural lighting, the series creates a meditative space for reflection on identity, change, and connection.
+![Mujeres Flores](/assets/images/portfolio/mujeres-flores/1_1_Mujeres_Flores_Eunice_Adorno.jpg)
+
+
+
+
+Es un acercamiento a la vida e historias de un grupos de mujeres menonitas que me han abierto las puertas de sus hogares y sus vidas para fotograﬁar sus espacios íntimos y sus acontecimientos diarios, dentro de las comunidades de Nuevo Ideal, Durango y la Onda Zacatecas.
+
+
+{% include carousel.html images=site.data.mujeres_flores_carousel %}
+
+
+La complicidad mutua y las relaciones emocionales que forman  entre ellas, son parte de esta serie de imágenes donde su cotidianidad  nos distraen de la idea regida de la vida conservadora de estas mujeres.
+Estas comunidades aisladas, fueron para mí, unas vidas extraordinarias. El mundo de estas mujeres me parece fascinante, enigmático. 
+
+Ese viaje fue  para mí, en donde yo misma me aíslo de mi mundo cotidiano y emprendo por esos caminos polvosos un viaje hacia mi propia historia. Como hija de padres cristianos, rememoro por instantes mi infancia de costumbres conservadoras marcada por la presencia de la religión. De alguna manera busco en sus colores y sus costumbres mi propia historia.
+
+
+
+Mirar a las mujeres menonitas es también ser mirada por ellas.
+
+___
+
+[Link Adquiere el libro](https://latam.casadellibro.com/libro-las-mujeres-flores/9788415303336/1954609?utm_source=euniceadorno.com)

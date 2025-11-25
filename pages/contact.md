@@ -4,11 +4,10 @@ title: Contact
 permalink: /contact/
 ---
 
-# Get in Touch
+# Contact Information
 
-I'm always interested in new projects and collaborations.
+Para Cualquier Colaboracion profesional, por favor contactarme a través de los siguientes medios:
 
-## Contact Information
 
 **Email:** [euniceadorno.studio@gmail.com](mailto:euniceadorno.studio@gmail.com)
 
@@ -16,4 +15,4 @@ I'm always interested in new projects and collaborations.
 
 ---
 
-For project inquiries, exhibitions, or general questions, please feel free to reach out via email or Instagram.
+
