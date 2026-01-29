@@ -5,6 +5,7 @@ description:
 year: 2016
 slug: octubre-rojo
 portada_img: "Octubre_Rojo_Libro_portada.jpg"
+order: 3
 ---
 
 ![Octubre Rojo](/assets/images/portfolio/octubre-rojo/1_Octubre_Rojo.png)

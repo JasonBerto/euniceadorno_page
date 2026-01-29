@@ -3,7 +3,8 @@ layout: default
 ---
 
 <div class="portfolio-grid">
-    {% for project in site.portfolio %}
+    {% assign sorted_projects = site.portfolio | sort: 'order' %}
+    {% for project in sorted_projects %}
     {% if project.published == false %}
         {% continue %}
     {% endif %}
