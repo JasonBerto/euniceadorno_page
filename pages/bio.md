@@ -11,4 +11,7 @@ Su trabajo se desarrolla entre la fotografía documental y otras disciplinas art
 
 A lo largo de su trayectoria ha explorado comunidades y contextos, como las mujeres menonitas del norte de México, los archivos de mujeres anarquistas de finales del siglo XIX, así como historias de estudiantes en distintos momentos históricos. 
 
-Su trabajo más reciente se ha centrado en ciertos paisajes construidos que muestran la decadencia y las paradojas del proyecto moderno: edificaciones en ruina, vestigios de procesos de industrialización y de la ingeniería hidráulica; así como las huellas que han dejado en el tejido social del país con continuas preguntas para el presente. Desde el año 2020 realiza la investigación Las aguas eran salvajes, sobre la memoria y la arqueología del agua en el país.
+Su trabajo más reciente se ha centrado en ciertos paisajes construidos que muestran la decadencia y las paradojas del proyecto moderno: edificaciones en ruina, vestigios de procesos de industrialización y de la ingeniería hidráulica; así como las huellas que han dejado en el tejido social del país con continuas preguntas para el presente. 
+
+Desde el año 2020 realiza la investigación Las aguas eran salvajes, sobre la memoria y la arqueología del agua en el país.
+
