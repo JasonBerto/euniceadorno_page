@@ -1,19 +1,26 @@
 ---
 layout: project
-title: Octubre Rojo
+title: Casa estudiantil Octubre Rojo
 description: 
 year: 2016
 slug: octubre-rojo
-images: 
-- "Octubre_Rojo_Libro_portada.jpg"
+portada_img: "Octubre_Rojo_Libro_portada.jpg"
 ---
 
-Octubre Rojo, se ha convertido con el tiempo, en un archivo, donde reúne una investigación con entrevistas, frases, dibujos, fotografías y videos que documente en la casa estudiantil “Octubre Rojo”, una casa-residencia para universitarios en Mazatlán Sinaloa, fundada tras el movimiento estudiantil de los años ochenta. La investigación presenta y construye un eje discursivo a través de una serie de imágenes que, detonando una reflexión sobre el impacto de la violencia estructural en la realidad actual de los estudiantes que ahí habitan, observa sus formas de organización y su noción de colectividad, los problemas que los afectan en tanto identidades que han heredado la “lucha” como símbolo, la relación histórica de su origen y la realidad actual de falta de trabajo, abandono, violencia estructural y cultura del narcotráfico.  
+![Octubre Rojo](/assets/images/portfolio/octubre-rojo/1_Octubre_Rojo.png)
 
-Mi acercamiento a esta casa estudiantil comenzó con diversas visitas al albergue en 2012: buscaba conocer la historia de la casa y las formas de organización que ella se daban, y fue así que comencé una serie de entrevistas con algunos de los estudiantes, en las cuales me fueron exponiendo tanto sus historias como sus expectativas de vida.
+La casa estudiantil “Octubre Rojo” era un viejo edificio abandonado, ubicado cerca del malecón en el centro antiguo de Mazatlán, Sinaloa. En el interior encontramos a pesar de su deterioro, cuartos comunes con literas y mesas que comparten los estudiantes que viven ahí, posters, dibujos, ropa esparcida y sonidos provenientes del radio y la televisión. La historia. En los años 80, estudiantes que cursaban sus estudios en la Universidad Autónoma de Sinaloa, exigían contar con dormitorios para alojar a los cientos de estudiantes de bajos recursos que provenían de distintos municipios y rancherías del estado que no tenían dónde vivir. Al ser ignoradas sus peticiones eran impulsados por los ánimos de lucha, tomaron, ocuparon y organizaron varios edificios abandonados.
 
-Esta casa ya fue derrumbada, y este proyecto recoge las memorias de este hogar, tanto del pasado como el presente. Lo que fuera este albergue estudiantil fue la huella utópica de aquellos estudiantes que pensaron en los otros , tomando espacios abandonados para hacer estas casas y abrir la oportunidad, a los que vivían en lugares muy apartados. Estás vivencias estudiantiles que he documentado me permiten una reflexión y aproximación al sentido comunitario y las practicas de un pasado utópico del cual documente lo que sobrevivía, sus restos de alguna manera, aún con las contradicciones y conflictos, aunado a la propia organización.
+![Octubre Rojo](/assets/images/portfolio/octubre-rojo/2_Octubre_Rojo.png)
 
+Es así como este inmueble, lo bautizaron “Octubre Rojo”, título que hace referencia a la matanza de estudiantes en 1968 y que inspiró la toma. Entre los años 2012–2017, Documenté los procesos de los jóvenes estudiantes que me permitieron entender formas de organización social alternativas, contradictorias, influenciadas por la violencia del entorno de los estudiantes, y a su vez, también con la influencia y herencia del movimiento estudiantil, interpretado y transversado por sus propios descendientes.
+
+![Octubre Rojo](/assets/images/portfolio/octubre-rojo/7_Octubre_Rojo.png)
+
+
+En 2018, hice junto con la curadora Allegra Cordero y el Centro Cultural Tlatelolco, una exposición que se compone de material de archivo, audios, textos y otros, que narran mi historia y aspectos autobiográficos en relación al 2 de Octubre de 1968, entrelazada con seis años de trabajo en la Casa Estudiantil Octubre Rojo ubicado en Mazatlán Sinaloa. Estas historias las comparto a manera de un mapa fotográfico-afectivo que relata cómo llegué ahí, mi relación directa y personal con el 2 de octubre: la historia de mi padre, estudiante del 68 y origen de todo este proyecto. Las imágenes aquí no son simple documentación, sino que conforman un universo subjetivo del que queremos saber más. Durante el recorrido de esta exposición, esta historia contada en fragmentos de imaginarios propios, vislumbra una totalidad narrativa de nuestra historia y nuestro presente: el 68, los estudiantes, la violencia estructural y el estado de un país arruinado por su propia situación a través de una casa, sus estudiantes y el relato familiar del 68.
+
+{% include carousel.html images=site.data.octubre_rojo_carousel %}
 ___
 
 

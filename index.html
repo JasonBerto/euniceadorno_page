@@ -6,7 +6,9 @@ layout: default
     {% for project in site.portfolio %}
     <a href="{{ project.url | relative_url }}" class="portfolio-item">
         <div class="portfolio-image">
-            {% if project.images and project.images.size > 0 %}
+            {% if project.portada_img %}
+            <img src="{{ '/assets/images/portfolio/' | append: project.slug | append: '/' | append: project.portada_img | relative_url }}" alt="{{ project.title }}">
+            {% elsif project.images and project.images.size > 0 %}
             <img src="{{ '/portfolio/' | append: project.slug | append: '/' | append: project.images[0] | relative_url }}" alt="{{ project.title }}">
             {% else %}
             <img src="{{ '/assets/images/placeholder.svg' | relative_url }}" alt="{{ project.title }}">
