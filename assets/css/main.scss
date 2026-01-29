@@ -63,6 +63,7 @@ img {
     flex-direction: column;
     z-index: 100;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(to bottom, rgba(4, 4, 4, 0.54) 0%, rgba(0, 0, 0, 0.8) 100%), url('/textura_website.jpeg');
     
     .sidebar-content {
         display: flex;
