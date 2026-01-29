@@ -22,7 +22,16 @@ Es así como este inmueble, lo bautizaron “Octubre Rojo”, título que hace r
 En 2018, hice junto con la curadora Allegra Cordero y el Centro Cultural Tlatelolco, una exposición que se compone de material de archivo, audios, textos y otros, que narran mi historia y aspectos autobiográficos en relación al 2 de Octubre de 1968, entrelazada con seis años de trabajo en la Casa Estudiantil Octubre Rojo ubicado en Mazatlán Sinaloa. Estas historias las comparto a manera de un mapa fotográfico-afectivo que relata cómo llegué ahí, mi relación directa y personal con el 2 de octubre: la historia de mi padre, estudiante del 68 y origen de todo este proyecto. Las imágenes aquí no son simple documentación, sino que conforman un universo subjetivo del que queremos saber más. Durante el recorrido de esta exposición, esta historia contada en fragmentos de imaginarios propios, vislumbra una totalidad narrativa de nuestra historia y nuestro presente: el 68, los estudiantes, la violencia estructural y el estado de un país arruinado por su propia situación a través de una casa, sus estudiantes y el relato familiar del 68.
 
 {% include carousel.html images=site.data.octubre_rojo_carousel %}
+
 ___
 
-
-[Link Adquiere el libro Octubre Rojo](https://sinresentimiento.com/producto/casa-estudiantil-octubre-rojo-de-eunice-adorno/)
+<div class="book-purchase">
+    <div class="book-cover">
+        <img src="/assets/images/portfolio/octubre-rojo/Octubre_Rojo_Libro_portada.jpg" alt="Casa Estudiantil Octubre Rojo - Libro">
+    </div>
+    <div class="book-info">
+        <h3>Casa Estudiantil Octubre Rojo</h3>
+        <p>Un recorrido fotográfico y narrativo por seis años de trabajo en la Casa Estudiantil Octubre Rojo ubicada en Mazatlán, Sinaloa. Este libro documenta las historias de jóvenes estudiantes y su relación con el movimiento estudiantil de 1968.</p>
+        <a href="https://sinresentimiento.com/producto/casa-estudiantil-octubre-rojo-de-eunice-adorno/" target="_blank" rel="noopener" class="buy-button">Adquiere el libro</a>
+    </div>
+</div>
