@@ -16,9 +16,11 @@ La casa estudiantil “Octubre Rojo” era un viejo edificio abandonado, ubicado
 Es así como este inmueble, lo bautizaron “Octubre Rojo”, título que hace referencia a la matanza de estudiantes en 1968 y que inspiró la toma. Entre los años 2012–2017, Documenté los procesos de los jóvenes estudiantes que me permitieron entender formas de organización social alternativas, contradictorias, influenciadas por la violencia del entorno de los estudiantes, y a su vez, también con la influencia y herencia del movimiento estudiantil, interpretado y transversado por sus propios descendientes.
 
 ![Octubre Rojo](/assets/images/portfolio/octubre-rojo/7_Octubre_Rojo.png)
+
+
 En 2018, hice junto con la curadora Allegra Cordero y el Centro Cultural Tlatelolco, una exposición que se compone de material de archivo, audios, textos y otros, que narran mi historia y aspectos autobiográficos en relación al 2 de Octubre de 1968, entrelazada con seis años de trabajo en la Casa Estudiantil Octubre Rojo ubicado en Mazatlán Sinaloa. Estas historias las comparto a manera de un mapa fotográfico-afectivo que relata cómo llegué ahí, mi relación directa y personal con el 2 de octubre: la historia de mi padre, estudiante del 68 y origen de todo este proyecto. Las imágenes aquí no son simple documentación, sino que conforman un universo subjetivo del que queremos saber más. Durante el recorrido de esta exposición, esta historia contada en fragmentos de imaginarios propios, vislumbra una totalidad narrativa de nuestra historia y nuestro presente: el 68, los estudiantes, la violencia estructural y el estado de un país arruinado por su propia situación a través de una casa, sus estudiantes y el relato familiar del 68.
 
-
+{% include carousel.html images=site.data.octubre_rojo_carousel %}
 ___
 
 
