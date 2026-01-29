@@ -26,4 +26,10 @@ A partir del archivo encontrado y reunido, ha estado reconstruyendo y rescatando
 
 {% include carousel.html images=site.data.desandar_carousel %}
 
+___
+
+[Link Adquiere el libro](https://www.gatonegro.ninja/)
+
+
+
 
