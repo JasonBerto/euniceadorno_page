@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Mamalones de Acapulco
-description: 
+description: Fotografías
 year: 2016
 slug: mamalones
 portada_img: "1_mamalones_acapulco.jpg"

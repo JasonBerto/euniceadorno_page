@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Valparaiso
-description: 
+description: Fotografías
 year: 2014
 slug: valparaiso
 portada_img: "1_valparaiso.png"
