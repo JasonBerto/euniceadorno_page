@@ -6,7 +6,7 @@ permalink: /contact/
 
 # Contact Information
 
-Para Cualquier Colaboracion profesional, por favor contactarme a través de los siguientes medios:
+Para cualquier colaboracion profesional, por favor contactarme a través de los siguientes medios:
 
 **Instagram:** [@euadorno](https://www.instagram.com/euadorno/)
 
