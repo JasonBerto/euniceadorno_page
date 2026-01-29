@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Desandar
-description: 
+description: Exposición / Libro
 year: 2023
 portada_img: "5_desandar.png"
 slug: desandar

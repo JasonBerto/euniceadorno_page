@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Casa estudiantil Octubre Rojo
-description: 
+description: Exposición / Libro
 year: 2016
 slug: octubre-rojo
 portada_img: "Octubre_Rojo_Libro_portada.jpg"

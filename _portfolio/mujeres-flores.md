@@ -1,11 +1,11 @@
 ---
 layout: project
 title: Mujeres Flores
-description: 
+description: Exposición / Libro
 year: 2011 
 slug: mujeres-flores
 portada_img: "29_mujeres_flores.jpg"
-order: 4
+order: 2
 ---
 
 
