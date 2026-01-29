@@ -32,6 +32,6 @@ ___
     <div class="book-info">
         <h3>Casa Estudiantil Octubre Rojo</h3>
         <p>Un recorrido fotográfico y narrativo por seis años de trabajo en la Casa Estudiantil Octubre Rojo ubicada en Mazatlán, Sinaloa. Este libro documenta las historias de jóvenes estudiantes y su relación con el movimiento estudiantil de 1968.</p>
-        <a href="https://sinresentimiento.com/producto/casa-estudiantil-octubre-rojo-de-eunice-adorno/" target="_blank" rel="noopener" class="buy-button">Adquiere el libro</a>
+        <a href="https://sinresentimiento.com/producto/casa-estudiantil-octubre-rojo-de-eunice-adorno/?utm_source=euniceadorno.com" target="_blank" rel="noopener" class="buy-button">Adquiere el libro</a>
     </div>
 </div>

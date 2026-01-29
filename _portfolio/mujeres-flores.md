@@ -29,6 +29,16 @@ Ese viaje fue  para mí, en donde yo misma me aíslo de mi mundo cotidiano y emp
 Mirar a las mujeres menonitas es también ser mirada por ellas.
 
 {% include carousel.html images=site.data.mujeres_flores_carousel %}
+
 ___
 
-[Link Adquiere el libro](https://latam.casadellibro.com/libro-las-mujeres-flores/9788415303336/1954609?utm_source=euniceadorno.com)
+<div class="book-purchase">
+    <div class="book-cover">
+        <img src="/assets/images/portfolio/mujeres-flores/29_mujeres_flores.jpg" alt="Las Mujeres Flores - Libro">
+    </div>
+    <div class="book-info">
+        <h3>Las Mujeres Flores</h3>
+        <p>Un acercamiento íntimo a la vida de mujeres menonitas en las comunidades de Nuevo Ideal, Durango y la Onda Zacatecas. Premio Nacional de Cultura Fernando Benítez 2010. Publicado por La Fábrica Editorial, España, 2011.</p>
+        <a href="https://latam.casadellibro.com/libro-las-mujeres-flores/9788415303336/1954609?utm_source=euniceadorno.com" target="_blank" rel="noopener" class="buy-button">Adquiere el libro</a>
+    </div>
+</div>

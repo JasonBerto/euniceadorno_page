@@ -15,7 +15,7 @@ Se compone de distintas acciones a raíz del uso del archivo: destellos, fragmen
 
 Todas estas mujeres fueron parte fundamental de la historia del México rebelde y sus nombres no aparecen en los libros de texto oficiales, ni siquiera nos resultan familiares. En la mayoría de los casos, sus acciones fueron cruciales para los ideales del partido.
 
-![Desandar](/assets/images/portfolio/desandar/2_desandar.png)
+![Desandar](/assets/images/portfolio/desandar/6_desandar.png)
 
 Estas mujeres se desempeñaron como escritoras, maestras, periodistas, fotógrafas, soldaderas, traficantes de armas, mensajeras, ideólogas, enfermeras, feministas, luchadoras sociales y activistas. Esta exposición presenta ficciones narrativas construidas a partir de distintos documentos en donde se muestran gestos e intervenciones al papel, con especial énfasis en la estética del deterioro, resaltando la mancha, el descuido y la incisión de algunas fotografías y negativos a lo hallado. Todas estas acciones y transformaciones son rebeldes y aluden al escrutinio que las ha dejado fuera de la historia.
 Los gestos alrededor de este archivo son una manera de continuar con las historias que contiene, desde la apropiación y la ficción. 
@@ -30,8 +30,13 @@ A partir del archivo encontrado y reunido, ha estado reconstruyendo y rescatando
 
 ___
 
-[Link Adquiere el libro](https://www.gatonegro.ninja/)
-
-
-
-
+<div class="book-purchase">
+    <div class="book-cover">
+        <img src="/assets/images/portfolio/desandar/100_desandar_portada_libro.jpeg" alt="Desandar - Libro">
+    </div>
+    <div class="book-info">
+        <h3>Desandar</h3>
+        <p>Una reconstrucción fotográfica y narrativa de las historias fragmentadas de mujeres del Partido Liberal Mexicano a principios del siglo XX. A través de destellos, fragmentos y collages, este libro rescata la memoria de escritoras, periodistas, fotógrafas, soldaderas y activistas que fueron parte fundamental del México rebelde.</p>
+        <a href="https://www.gatonegro.ninja/?utm_source=euniceadorno.com" target="_blank" rel="noopener" class="buy-button">Adquiere el libro</a>
+    </div>
+</div>
