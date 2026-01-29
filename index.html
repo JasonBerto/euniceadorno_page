@@ -4,6 +4,9 @@ layout: default
 
 <div class="portfolio-grid">
     {% for project in site.portfolio %}
+    {% if project.published == false %}
+        {% continue %}
+    {% endif %}
     <a href="{{ project.url | relative_url }}" class="portfolio-item">
         <div class="portfolio-image">
             {% if project.portada_img %}
