@@ -39,6 +39,6 @@ ___
     <div class="book-info">
         <h3>Las Mujeres Flores</h3>
         <p>Un acercamiento íntimo a la vida de mujeres menonitas en las comunidades de Nuevo Ideal, Durango y la Onda Zacatecas. Premio Nacional de Cultura Fernando Benítez 2010. Publicado por La Fábrica Editorial, España, 2011.</p>
-        <a href="https://latam.casadellibro.com/libro-las-mujeres-flores/9788415303336/1954609?utm_source=euniceadorno.com" target="_blank" rel="noopener" class="buy-button">Adquiere el libro</a>
+
     </div>
 </div>
