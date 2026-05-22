@@ -155,6 +155,15 @@ img {
     margin-left: $sidebar-width;
     min-height: 100vh;
     padding: 50px 60px;
+
+    &.landing {
+        background-color: $background-color;
+        background-image: url('/assets/images/page_backgroun_1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 // Portfolio Grid
@@ -498,6 +507,10 @@ img {
     .main-content {
         margin-left: 0;
         padding: 30px 20px;
+
+        &.landing {
+            background-attachment: scroll;
+        }
     }
     
     .portfolio-grid {
