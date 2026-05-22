@@ -4,7 +4,7 @@ title: Valparaiso
 description: Fotografías
 year: 2014
 slug: valparaiso
-portada_img: "1_valparaiso.png"
+portada_img: "2_valparaiso.png"
 order: 5
 published: true
 ---
