@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <!-- Fixed Sidebar Navigation -->
-    <aside class="sidebar">
+    <!-- Top Navigation -->
+    <header class="sidebar">
         <div class="sidebar-content">
             <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
             <nav class="main-nav">
@@ -43,7 +43,7 @@
                 <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
             </div>
         </div>
-    </aside>
+    </header>
 
     <!-- Main Content Area -->
     <main class="main-content{% if page.landing %} landing{% endif %}">
