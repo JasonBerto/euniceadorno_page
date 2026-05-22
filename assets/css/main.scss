@@ -85,7 +85,7 @@ img {
         flex-shrink: 0;
         
         a {
-            color: $sidebar-text;
+            color: #064d7e;
             
             &:hover {
                 opacity: 0.8;
@@ -181,7 +181,7 @@ img {
 // Portfolio Grid
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     width: 100%;
     max-width: 1400px;
