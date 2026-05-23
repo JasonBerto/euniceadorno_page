@@ -2,7 +2,7 @@
 ---
 
 // Index Theme Variables - Refined Minimal Design
-$sidebar-width: 300px;
+$navbar-height: 80px;
 $sidebar-bg: #1a1a1a;
 $sidebar-text: #ffffff;
 $background-color: #f8f8f8;
@@ -49,36 +49,58 @@ img {
     display: block;
 }
 
-// Sidebar Navigation
+// Top Navigation
 .sidebar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
-    width: $sidebar-width;
-    height: 100vh;
-    background-color: $sidebar-bg;
-    color: $sidebar-text;
-    padding: 60px 40px 40px;
+    right: 0;
+    width: 100%;
+    height: $navbar-height;
+    //background-color: #79a6b4;
+    //color: $sidebar-text;
+    color: #064d7e;
+    padding: 0 40px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     z-index: 100;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-    background-image: linear-gradient(to bottom, rgba(4, 4, 4, 0.54) 0%, rgba(0, 0, 0, 0.8) 100%), url('/textura_website.jpeg');
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    isolation: isolate;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/assets/images/sidebar_background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        z-index: 0;
+    }
     
     .sidebar-content {
+        position: relative;
+        z-index: 1;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
         height: 100%;
     }
     
     .site-title {
         font-size: 22px;
         font-weight: 600;
-        margin-bottom: 50px;
+        margin-bottom: 0;
         letter-spacing: -0.5px;
+        flex-shrink: 0;
         
         a {
-            color: $sidebar-text;
+            color: #064d7e;
             
             &:hover {
                 opacity: 0.8;
@@ -91,14 +113,17 @@ img {
         
         ul {
             list-style: none;
+            display: flex;
+            gap: 32px;
             
             li {
-                margin-bottom: 16px;
+                margin-bottom: 0;
                 
                 a {
                     font-size: 16px;
                     font-weight: 400;
-                    color: $sidebar-text;
+                    //color: $sidebar-text;
+                    color: #064d7e;
                     display: block;
                     padding: 6px 0;
                     letter-spacing: 0.3px;
@@ -106,7 +131,7 @@ img {
                     
                     &:hover {
                         opacity: 0.7;
-                        transform: translateX(2px);
+                        transform: translateY(-2px);
                     }
                 }
             }
@@ -114,16 +139,22 @@ img {
     }
     
     .sidebar-footer {
-        margin-top: auto;
+        margin-top: 0;
+        margin-left: auto;
         font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-shrink: 0;
         
         .social-links {
             display: flex;
             gap: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 0;
             
             a {
-                color: $sidebar-text;
+                //color: $sidebar-text;
+                color: #064d7e;
                 opacity: 0.7;
                 transition: opacity $transition-speed, transform $transition-speed;
                 display: flex;
@@ -143,24 +174,31 @@ img {
         }
         
         p {
-            opacity: 0.5;
-            font-size: 13px;
-            color: $sidebar-text;
+            display: none;
         }
     }
 }
 
 // Main Content Area
 .main-content {
-    margin-left: $sidebar-width;
+    margin-left: 0;
     min-height: 100vh;
     padding: 50px 60px;
+
+    &.landing {
+        background-color: $background-color;
+        background-image: url('/assets/images/page_backgroun_1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 // Portfolio Grid
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     width: 100%;
     max-width: 1400px;
@@ -429,13 +467,7 @@ img {
 }
 
 @media (max-width: 1024px) {
-    .sidebar {
-        width: 260px;
-        padding: 50px 30px 30px;
-    }
-    
     .main-content {
-        margin-left: 260px;
         padding: 40px;
     }
     
@@ -446,58 +478,44 @@ img {
 
 @media (max-width: 768px) {
     .sidebar {
-        position: relative;
-        width: 100%;
         height: auto;
-        padding: 25px 20px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        min-height: $navbar-height;
+        padding: 16px 20px;
         
         .sidebar-content {
-            flex-direction: row;
-            align-items: center;
-            gap: 25px;
+            flex-wrap: wrap;
+            gap: 16px 24px;
         }
         
         .site-title {
-            margin-bottom: 0;
             font-size: 19px;
         }
         
         .main-nav {
-            flex: 0;
+            order: 3;
+            flex: 1 1 100%;
             
             ul {
-                display: flex;
                 gap: 20px;
                 
-                li {
-                    margin-bottom: 0;
-                    
-                    a {
-                        font-size: 15px;
-                        padding: 4px 0;
-                    }
+                a {
+                    font-size: 15px;
+                    padding: 4px 0;
                 }
             }
         }
         
-        .sidebar-footer {
-            margin-left: auto;
-            
-            .social-links {
-                margin-bottom: 0;
-                gap: 12px;
-            }
-            
-            p {
-                display: none;
-            }
+        .sidebar-footer .social-links {
+            gap: 12px;
         }
     }
     
     .main-content {
-        margin-left: 0;
         padding: 30px 20px;
+
+        &.landing {
+            background-attachment: scroll;
+        }
     }
     
     .portfolio-grid {
@@ -528,17 +546,9 @@ img {
 }
 
 @media (max-width: 480px) {
-    .sidebar {
-        .sidebar-content {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .main-nav ul {
-            flex-direction: column;
-            gap: 10px;
-        }
+    .sidebar .main-nav ul {
+        flex-wrap: wrap;
+        gap: 12px 16px;
     }
 }
 
