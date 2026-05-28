@@ -18,6 +18,8 @@ Las fotografías incluidas en la muestra registran las cualidades escultóricas 
 
 En la mitología griega, el centauro es la criatura mitad hombre mitad caballo que representa la dualidad entre lo civilizado y lo salvaje, la razón y los instintos naturales. En ese sentido, las imágenes de Eunice Adorno recuerdan la latencia vital indomable escondida en todo proceso civilizatorio, la impensable respiración entre las fibras de lo aparentemente inerte, la belleza que es posible hallar en objetos de planificación y silenciosa muerte, la fuerza indómita de una escritura que no calla si la sabemos leer. La destrucción del tinaco dió paso a la crónica, “como acto de reconocimiento” –apunta la artista–. ¿Qué narración de nosotros mismos podemos reconocer en él?¿Qué tipo de vínculo afectivo establecemos con ellos, como superficie, piel, cuerpo hondo que contiene la vida y sus memorias? ¿Qué escrituras ofrece para un porvenir de distopías? 
 
+Texto y curaduría: Roselin Rodríguez Espinoza
+
 {% include carousel.html images=site.data.cronicas_de_un_tinaco_de_asbesto %}
 
 
